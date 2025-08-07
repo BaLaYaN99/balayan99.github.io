@@ -1,30 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="hy">
 <head>
-  <title>Բարի Գալուստ Իմ Կայք</title>
+  <meta charset="UTF-8">
+  <title>Բալայան Բիզնես</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; }
-    h1 { color: darkblue; }
-    button { padding: 10px 20px; font-size: 16px; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 50px;
+      text-align: center;
+      background-color: #e0f0ff;
+    }
+
+    .hero img {
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #004999;
+    }
+
+    footer {
+      background-color: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <h1>ԲԱԼԱՅԱՆ ԲԻԶՆԵՍ</h1>
-  <p>Բարի գալուստ մեր պաշտոնական կայք։</p>
 
-  <!-- ՆԿԱՐ ՔՈ ԿՈՂՄԻՑ (փոխիր հղումը քո նկարի հասցեով) -->
-  <https://github.com/BaLaYaN99/balayan99.github.io/commit/56e2c4aa4c020b7be912113368ccc72db66e7e98>
+  <header>
+    <h1>ԲԱԼԱՅԱՆ ԲԻԶՆԵՍ</h1>
+    <nav>
+      <a href="#home">Գլխավոր</a>
+      <a href="#about">Մեր մասին</a>
+      <a href="#contact">Կապ</a>
+    </nav>
+  </header>
 
-  <!-- ՄԵՐ ՄԱՍԻՆ ԲԱԺԻՆ -->
-  <h2>Մեր մասին</h2>
-  <p>Մենք առաջարկում ենք բարձրորակ ծառայություններ և վստահելի համագործակցություն։ Մեր նպատակը՝ ձեր հաջողությունը։</p>
+  <div class="hero" id="home">
+    <h2>Բարի Գալուստ Մեր Կայք</h2>
+    <p>Մենք առաջարկում ենք լավագույն ծառայությունները հարմար գներով։</p>
+    <img src="myphoto.jpg" alt="Մեր Բիզնեսի Նկարը">
+  </div>
 
-  <!-- ԿԱՊ ԿՈՃԱԿ -->
-  <button onclick="window.location.href='tel:+37491123456'">Զանգահարել</button>
+  <div class="section" id="about">
+    <h2>Մեր Մասին</h2>
+    <p>Բալայան Բիզնեսը միավորում է որակ, արագություն և վստահելիություն։ Մեր թիմը պատրաստ է աջակցել ձեզ ցանկացած փուլում։</p>
+  </div>
 
-  <!-- WhatsApp ԿՈՃԱԿ -->
-  <br><br>
-  <button onclick="window.location.href='https://wa.me/37491123456'">Գրել WhatsApp-ում</button>
+  <div class="section" id="contact">
+    <h2>Կապ մեզ հետ</h2>
+    <button onclick="window.location.href='tel:+37491123456'">📞 Զանգահարել</button>
+    <button onclick="window.location.href='https://wa.me/37491123456'">💬 Գրել WhatsApp-ում</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Բալայան Բիզնես. Բոլոր իրավունքները պաշտպանված են։
+  </footer>
 
 </body>
 </html>
