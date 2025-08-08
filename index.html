@@ -1,87 +1,89 @@
+from pathlib import Path
+from zipfile import ZipFile
+
+# Ստեղծում ենք HTML բովանդակություն՝ գեղեցիկ ու պարզ կայք
+html_content = """
 <!DOCTYPE html>
 <html lang="hy">
 <head>
-  <meta charset="UTF-8">
-  <title>Բալայանի Բիզնես</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #0077cc;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    nav {
-      background-color: #005fa3;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #0077cc;
-      color: white;
-    }
-    h2 {
-      color: #005fa3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Բալայանի Ծառայությունները</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #005bbb;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .button {
+            display: inline-block;
+            background-color: #005bbb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        footer {
+            text-align: center;
+            background-color: #eee;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-
-<header>
-  <h1>Բալայանի Բիզնես</h1>
-  <p>Որակյալ ծառայություններ՝ վստահությամբ</p>
-</header>
-
-<nav>
-  <a href="#services">Ծառայություններ</a>
-  <a href="#about">Մեր Մասին</a>
-  <a href="#contact">Կապ</a>
-</nav>
-
-<section id="services">
-  <h2>Ծառայություններ</h2>
-  <ul>
-    <li>Վեբ կայքերի ստեղծում</li>
-    <li>Սոցիալական մեդիա կառավարում</li>
-    <li>Գրաֆիկ դիզայն</li>
-  </ul>
-</section>
-
-<section id="about">
-  <h2>Մեր Մասին</h2>
-  <p>Մենք առաջարկում ենք ժամանակակից լուծումներ՝ ձեր բիզնեսը ինտերնետում զարգացնելու համար։ Մեր թիմը բաղկացած է փորձառու մասնագետներից։</p>
-</section>
-
-<section id="contact">
-  <h2>Կապ մեզ հետ</h2>
-  <p>Էլ․հասցե՝ <a href="mailto:balayan@example.com">balayan99@mail.bk</a></p>
-  <p>Հեռ․՝ +374 96 67 66 64 </p>
-</section>
-
-<footer>
-  <p>&copy; 2025 Բալայանի Բիզնես</p>
-</footer>
-
+    <header>
+        <h1>Բալայանի Ծառայությունները</h1>
+        <p>Ձեր վստահելի գործընկերը որակյալ ծառայությունների ոլորտում</p>
+    </header>
+    <main>
+        <div class="section">
+            <h2>Մեր Մասին</h2>
+            <p>Մենք տրամադրում ենք տարբեր ոլորտների ծառայություններ՝ իդեալական համադրությամբ պրոֆեսիոնալիզմի և վստահության։ Մեր նպատակն է բարելավել Ձեր առօրյան՝ ապահովելով բարձրորակ սպասարկում։</p>
+        </div>
+        <div class="section">
+            <h2>Տեղեկատվություն</h2>
+            <p><strong>Հասցե՝</strong> Երևան, Հայաստան<br>
+            <strong>Հեռախոս՝</strong> +374 99 000000<br>
+            <strong>Էլ․ փոստ՝</strong> info@balayan.am</p>
+            <a class="button" href="mailto:info@balayan.am">Կապ մեզ հետ</a>
+        </div>
+    </main>
+    <footer>
+        © 2025 Բալայանի Ծառայություններ - Բոլոր իրավունքները պաշտպանված են
+    </footer>
 </body>
 </html>
+"""
+
+# Ստեղծում ենք index.html ֆայլ
+output_dir = Path("/mnt/data/katarelagorcvac_kayq_balayani")
+output_dir.mkdir(parents=True, exist_ok=True)
+index_file = output_dir / "index.html"
+index_file.write_text(html_content, encoding="utf-8")
+
+# Փաթեթավորում ենք zip ֆայլ
+zip_path = Path("/mnt/data/balayani_katarelagorcvac_kayq.zip")
+with ZipFile(zip_path, 'w') as zipf:
+    zipf.write(index_file, arcname="index.html")
+
+zip_path.name  # վերադարձնում ենք անունը հղման համար
+
