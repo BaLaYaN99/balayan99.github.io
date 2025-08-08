@@ -1,8 +1,4 @@
-from pathlib import Path
-from zipfile import ZipFile
 
-# Ստեղծում ենք HTML բովանդակություն՝ գեղեցիկ ու պարզ կայք
-html_content = """
 <!DOCTYPE html>
 <html lang="hy">
 <head>
@@ -73,17 +69,4 @@ html_content = """
 </body>
 </html>
 """
-
-# Ստեղծում ենք index.html ֆայլ
-output_dir = Path("/mnt/data/katarelagorcvac_kayq_balayani")
-output_dir.mkdir(parents=True, exist_ok=True)
-index_file = output_dir / "index.html"
-index_file.write_text(html_content, encoding="utf-8")
-
-# Փաթեթավորում ենք zip ֆայլ
-zip_path = Path("/mnt/data/balayani_katarelagorcvac_kayq.zip")
-with ZipFile(zip_path, 'w') as zipf:
-    zipf.write(index_file, arcname="index.html")
-
-zip_path.name  # վերադարձնում ենք անունը հղման համար
 
