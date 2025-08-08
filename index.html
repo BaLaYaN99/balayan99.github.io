@@ -2,172 +2,86 @@
 <html lang="hy">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Բալայան Բիզնես</title>
+  <title>Բալայանի Բիզնես</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
       color: #333;
     }
-
     header {
-      background-color: #003366;
+      background-color: #0077cc;
       color: white;
       padding: 20px 0;
       text-align: center;
     }
-
+    nav {
+      background-color: #005fa3;
+      padding: 10px;
+      text-align: center;
+    }
     nav a {
-      margin: 0 15px;
       color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-
-    .hero {
-      background-color: #e6f2ff;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero img {
-      width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .services, .team {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .card {
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
       background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    button {
-      background-color: #0073e6;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 10px;
-    }
-
-    button:hover {
-      background-color: #005bb5;
-    }
-
     footer {
-      background-color: #222;
-      color: #aaa;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      padding: 10px;
+      background-color: #0077cc;
+      color: white;
     }
-
-    @media (max-width: 600px) {
-      .services, .team {
-        flex-direction: column;
-        align-items: center;
-      }
+    h2 {
+      color: #005fa3;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>ԲԱԼԱՅԱԶ ԲԻ՛ՆԵՍ</h1>
-    <nav>
-      <a href="#home">Գլխավոր</a>
-      <a href="#about">Մեր մասին</a>
-      <a href="#services">Ծառայություններ</a>
-      <a href="#team">Չիմ</a>
-      <a href="#contact">Կապ</a>
-    </nav>
-  </header>
+<header>
+  <h1>Բալայանի Բիզնես</h1>
+  <p>Որակյալ ծառայություններ՝ վստահությամբ</p>
+</header>
 
-  <div class="hero" id="home">
-    <h2>Բարի Գալուստ Մեր Կայք</h2>
-    <p>Ձեր վստահելի գործգենտընըսթության որագինը։</p>
-    <img src="photo.jpg" alt="Hero Նկար">
-  </div>
+<nav>
+  <a href="#services">Ծառայություններ</a>
+  <a href="#about">Մեր Մասին</a>
+  <a href="#contact">Կապ</a>
+</nav>
 
-  <div class="section" id="about">
-    <h2>Մեր Մասին</h2>
-    <p>Մենք նորարականական ընկերությունյան էք, որը միավորում է փորթը, բարձր օոխակը և հաճակաթակենտրոն մոտեցումը։</p>
-  </div>
+<section id="services">
+  <h2>Ծառայություններ</h2>
+  <ul>
+    <li>Վեբ կայքերի ստեղծում</li>
+    <li>Սոցիալական մեդիա կառավարում</li>
+    <li>Գրաֆիկ դիզայն</li>
+  </ul>
+</section>
 
-  <div class="section" id="services">
-    <h2>Ծառայություններ</h2>
-    <div class="services">
-      <div class="card">
-        <img src="service1.jpg" alt="Ծառայություն 1">
-        <h3>Վեբ Կայքերի Ստեղցում</h3>
-        <p>Անհատականացված, ժամանակակից Կայքեր Գեր բիզնեսի համարը։</p>
-      </div>
-      <div class="card">
-        <img src="service2.jpg" alt="Ծառայություն 2">
-        <h3>Դիզայն և Բրենդինգ</h3>
-        <p>Պրոֆեսիոնալ լոգոներ, Բրենդբուքեր և այլք։</p>
-      </div>
-      <div class="card">
-        <img src="service3.jpg" alt="Ծառայություն 3">
-        <h3>Սոցթերկային Մեդիա Վարում</h3>
-        <p>Ակտիվ ներկայություն Instagramում, Facebookում և այլք։</p>
-      </div>
-    </div>
-  </div>
+<section id="about">
+  <h2>Մեր Մասին</h2>
+  <p>Մենք առաջարկում ենք ժամանակակից լուծումներ՝ ձեր բիզնեսը ինտերնետում զարգացնելու համար։ Մեր թիմը բաղկացած է փորձառու մասնագետներից։</p>
+</section>
 
-  <div class="section" id="team">
-    <h2>Մեր Թիմը</h2>
-    <div class="team">
-      <div class="card">
-        <img src="person1.jpg" alt="Անհատ 1">
-        <h3>Արմեն Բալայան</h3>
-        <p>Տնորեն</p>
-      </div>
-      <div class="card">
-        <img src="person2.jpg" alt="Անհատ 2">
-        <h3>Անահիտ Սարգսյան</h3>
-        <p>Դիզայներ</p>
-      </div>
-    </div>
-  </div>
+<section id="contact">
+  <h2>Կապ մեզ հետ</h2>
+  <p>Էլ․հասցե՝ <a href="mailto:balayan@example.com">balayan@example.com</a></p>
+  <p>Հեռ․՝ +374 77 00 00 00</p>
+</section>
 
-  <div class="section" id="contact">
-    <h2>Կապ մեզ հետ</h2>
-    <button onclick="window.location.href='tel:+37491123456'">📞 Զանգահարել</button>
-    <button onclick="window.location.href='https://wa.me/37491123456'">💬 WhatsApp</button>
-  </div>
-
-  <footer>
-    &copy; 2025 Բալայան Բիզնես — Բոլոր իրավունքները պատկանված են։
-  </footer>
+<footer>
+  <p>&copy; 2025 Բալայանի Բիզնես</p>
+</footer>
 
 </body>
 </html>
